@@ -20,8 +20,8 @@ fi
 # Update AMXX Plugins
 if [ -d /home/container/tfc/addons/amxmodx/plugins/.git/ ]; then
 	cd /home/container/tfc/addons/amxmodx/plugins
-	git reset --hard HEAD
-	git pull https://github.com/ESClan/plugins.git
+	git fetch --all
+	git reset --hard origin/master
 else
 	if [ -d /home/container/tfc/addons/amxmodx/ ]; then 
 		rm -rf /home/container/tfc/addons/amxmodx/plugins
