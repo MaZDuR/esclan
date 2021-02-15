@@ -20,8 +20,8 @@ fi
 # Update AMXX Plugins
 if [ -d /home/container/tfc/addons/amxmodx/plugins/.git/ ]; then
 	cd /home/container/tfc/addons/amxmodx/plugins
-	git fetch --all
-	git reset --hard origin/master
+	git clean -dxf
+	git pull origin master
 else
 	if [ -d /home/container/tfc/addons/amxmodx/ ]; then 
 		rm -rf /home/container/tfc/addons/amxmodx/plugins
